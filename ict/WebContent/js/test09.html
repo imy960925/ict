@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<table border="2">
+
+
+		<tr>
+			<td colspan="2" align=center>회원가입</td>
+		</tr>
+		<tr>
+			<td>ID</td> <td><input type="text" id="id" name="id"></td>
+		</tr>
+		<tr>
+		<td>PWD</td> <td><input type="password" id="pwd" name="pwd"></td>
+		</tr>
+		<tr>
+		<td>NAME</td> <td><input type="name" id="name" name="name"></td>
+		</tr>
+		<tr>
+		<td>AGE</td> <td><input type="number" id="age" name="age"></td>
+		</tr>
+		<tr>
+		<td colspan="2" align=center> <button>회원가입</button></td>
+		</tr>
+		
+		
+	</table>
+	<form>
+
+	
+	</form>
+	<script>
+function check() {
+	var idObj = document.querySelector('#id');
+	var pwdObj = document.querySelector('#pwd');
+	var nameObj = document.querySelector('#name');
+	var ageObj = document.querySelector('#age')
+	if(idObj.value.trim().length<5) {
+		alert("id는 5글자 이상입니다.")
+		idobj.value="";
+		idobj.focus();
+		return false;
+	}
+	
+	if(pwdObj.value.trim().length<6) {
+		alert("pwd는 6글자 이상입니다.")
+		pwdobj.value="";
+		pwdobj.focus();
+		return false;
+}
+	if(nameObj.value.trim().length<"") {
+		alert("name는 ""글자 이상입니다.")
+		nameobj.value="";
+		nameobj.focus();
+		return false;
+	}
+	if(ageObj.length=>130) {
+		alert("age는  130 이하입니다.")
+	    ageobj.focus();
+		return false;
+	}
+</script>
+</body>
+</html>
